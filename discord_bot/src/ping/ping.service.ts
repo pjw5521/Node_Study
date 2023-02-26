@@ -2,7 +2,7 @@ import { Injectable, OnModuleInit } from '@nestjs/common';
 import { Client, GatewayIntentBits, Partials } from 'discord.js';
 
 @Injectable()
-export class BotService implements OnModuleInit {
+export class PingService implements OnModuleInit {
     client;
     constructor() {
         this.client = new Client({ intents: [GatewayIntentBits.Guilds,GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent, GatewayIntentBits.DirectMessages ], partials: [Partials.Channel] });
